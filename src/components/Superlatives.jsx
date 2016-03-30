@@ -54,6 +54,8 @@ const Superlatives = React.createClass({
   		randomNum = Math.floor(Math.random() * people.length - 1);
   		if(randomNumArr.indexOf(randomNum) == -1){
   			randomNumArr.push(randomNum);
+  		}else{
+  			i -= 2;
   		}
     }
     return (

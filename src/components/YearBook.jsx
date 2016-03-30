@@ -31,6 +31,7 @@ const Yearbook = React.createClass({
       <div className="text-center">
         <h1>Yearbook</h1>
         <Link to={`/superlatives`}><h3>Class Awards</h3></Link>
+        <Link to={'/about'}><h3>About This School</h3></Link>
         <div className="row">{people}</div>
       </div>
     );
