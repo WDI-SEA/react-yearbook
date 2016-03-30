@@ -1,5 +1,6 @@
 const React = require('react');
 const Person = require('./Person');
+const NavBar = require('./NavBar');
 
 const Yearbook = React.createClass({
   getInitialState: function() {
@@ -18,6 +19,7 @@ const Yearbook = React.createClass({
   render: function() {
     if (!this.state.people) return (
       <div>
+
         <h1>Yearbook</h1>
         <h2>Loading...</h2>
       </div>
@@ -28,6 +30,7 @@ const Yearbook = React.createClass({
     });
     return (
       <div>
+        <NavBar />
         <h1>Yearbook</h1>
         <div className="row">{people}</div>
       </div>

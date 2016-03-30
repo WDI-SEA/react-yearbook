@@ -1,9 +1,11 @@
 const React = require('react');
+const NavBar = require('./NavBar');
 
 const About = React.createClass ({
   render: function () {
     return (
       <div className="text-center">
+       <NavBar />
         <h1 className="school">Midvale School for the Gifted</h1>
         <img src="http://americanthings.files.wordpress.com/2009/07/the-far-side-by-ejblog-files-wordpressdotcom.jpg"></img>
 
