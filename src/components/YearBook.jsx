@@ -30,11 +30,13 @@ const Yearbook = React.createClass({
     return (
       <div>
         <h1 className="text-center">The Random Yearbook</h1>
-        <h3 className="text-center">
+          <div className="titlecapholder">
+            <h3 className="text-center titlecaption">
           Celebrate the memories you did not have, with people you do not know.
         </h3>
         <div className="row">{people}</div>
       </div>
+    </div>
     );
   }
 });

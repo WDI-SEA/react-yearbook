@@ -1,11 +1,12 @@
 const React = require('react');
+const NavBar = require('./navbar');
 
 const PersonShow = React.createClass({
   getInitialState: function() {
     return {person: null};
   },
   componentDidMount() {
-    fetch(`/api/people/people[:idx]`) //hardcoded needs to be a variable
+    fetch(`/api/people/${this.props.params.id}`) //hardcoded needs to be a variable
       .then(response => {
         response.json().then(data => {
           this.setState({person: data.user});
@@ -31,9 +32,10 @@ const PersonShow = React.createClass({
 
     return (
       <div>
+      <NavBar />
         <div className="well">
           <img src={this.state.person.picture.medium} />
-          <h2>{this.personName()}</h2>
+          <h2>{this.personName()} a/k/a Random #{this.props.params.id}</h2>
           <ul>
             <li><strong>Email:</strong> {this.state.person.email}</li>
             <li><strong>Phone:</strong> {this.state.person.phone}</li>

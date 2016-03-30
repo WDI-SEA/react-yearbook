@@ -1,4 +1,5 @@
 const React = require('react');
+const NavBar = require('./navbar');
 
 const About = React.createClass({
   render: function() {

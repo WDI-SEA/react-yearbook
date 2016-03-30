@@ -5821,3 +5821,15 @@ img.ybheader {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+h1 {
+  font-family: 'Cinzel', serif; }
+
+h3.titlecaption {
+  font-family: 'Poiret One', cursive; }
+
+div.titlecapholder {
+  margin-bottom: 3em; }
+
+body {
+  background-color: #f2f2f2; }
