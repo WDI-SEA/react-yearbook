@@ -11,9 +11,10 @@ const Person = React.createClass({
   render: function() {
     let picture = this.props.person.user.picture;
     return (
-      <div className="col-md-3">
+      <div key="idx" className="col-md-3">
         <img src={picture.medium} />
         <h3>{this.personName()}</h3>
+        <p>{this.props.person.idx}</p>
       </div>
     );
   }

@@ -1,12 +1,13 @@
 const React = require('react');
 const Person = require('./Person');
+const Link = require('react-router').Link;
 
 const Yearbook = React.createClass({
   getInitialState: function() {
     return {people: null};
   },
   componentDidMount() {
-    fetch('/api/people')
+    fetch('/api/people/')
       .then(response => {
         response.json().then(data => {
           this.setState({people: data});
@@ -28,7 +29,10 @@ const Yearbook = React.createClass({
     });
     return (
       <div>
-        <h1>Yearbook</h1>
+        <h1 className="text-center">The Random Yearbook</h1>
+        <h3 className="text-center">
+          Celebrate the memories you did not have, with people you do not know.
+        </h3>
         <div className="row">{people}</div>
       </div>
     );
