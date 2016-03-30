@@ -29,7 +29,9 @@ const Yearbook = React.createClass({
     return (
       <div>
         <h1>Yearbook</h1>
-        <div className="row">{people}</div>
+        <div className="row">
+          {people}
+        </div>
       </div>
     );
   }

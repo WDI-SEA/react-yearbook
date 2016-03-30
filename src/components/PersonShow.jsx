@@ -5,7 +5,7 @@ const PersonShow = React.createClass({
     return {person: null};
   },
   componentDidMount() {
-    fetch(`/api/people/0`)
+    fetch(`/api/people/${this.props.params.idx}`)
       .then(response => {
         response.json().then(data => {
           this.setState({person: data.user});
@@ -22,6 +22,7 @@ const PersonShow = React.createClass({
     return `${this.capitalize(name.first)} ${this.capitalize(name.last)}`
   },
   render: function() {
+    console.log(this.props.params);
     if (!this.state.person) return (
       <div>
         <h1>Yearbook</h1>
