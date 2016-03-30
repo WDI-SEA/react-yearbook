@@ -1,1 +1,15 @@
 @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+.yrbook-navbar {
+  list-style: none;
+
+  li {
+    display: inline;
+    padding: 10em;
+  }
+}
+
+container {
+  background-color: darkolivegreen;
+  text-align: center;
+}
