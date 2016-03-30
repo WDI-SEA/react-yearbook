@@ -1,5 +1,5 @@
 const React = require('react');
-
+const Link = require('react-router').Link;
 const Person = React.createClass({
   capitalize: function(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
@@ -13,7 +13,7 @@ const Person = React.createClass({
     return (
       <div className="col-md-3">
         <img src={picture.medium} />
-        <h3>{this.personName()}</h3>
+        <h3><Link to={`/person/${this.props.idx}`}>{this.personName()}</Link></h3>
       </div>
     );
   }
