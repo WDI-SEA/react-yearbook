@@ -1,5 +1,9 @@
 const React = require('react');
 const Person = require('./Person');
+const NavBar = require("./NavBar");
+
+const Link = require("react-router").Link;
+
 
 const Yearbook = React.createClass({
   getInitialState: function() {
@@ -26,10 +30,14 @@ const Yearbook = React.createClass({
     let people = this.state.people.map((person, idx) => {
       return <Person key={idx} idx={idx} person={person} />;
     });
+
     return (
       <div>
+        <NavBar />
         <h1>Yearbook</h1>
-        <div className="row">{people}</div>
+        <div className="row">
+          {people}
+        </div>
       </div>
     );
   }

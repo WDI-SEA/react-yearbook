@@ -1,1 +1,15 @@
 @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  text-align: center;
+
+  list-style:none;
+}
+.navbar {
+  list-style: none;
+
+  li {
+    display: inline;
+    padding: 1em;
+  }
+}
