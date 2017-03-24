@@ -1,11 +1,12 @@
 const React = require('react');
-
+const YearBook = require('./YearBook');
+const Link = require('react-router').Link;
 const PersonShow = React.createClass({
   getInitialState: function() {
     return {person: null};
   },
   componentDidMount() {
-    fetch(`/api/people/0`)
+    fetch(`/api/people/${this.props.params.id}`)
       .then(response => {
         response.json().then(data => {
           this.setState({person: data.user});
@@ -31,6 +32,7 @@ const PersonShow = React.createClass({
 
     return (
       <div>
+        <Link to="/">Home</Link>
         <div className="well">
           <img src={this.state.person.picture.medium} />
           <h2>{this.personName()}</h2>

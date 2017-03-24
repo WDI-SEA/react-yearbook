@@ -1,6 +1,6 @@
 const React = require('react');
 const Person = require('./Person');
-
+const Link = require('react-router').Link;
 const Yearbook = React.createClass({
   getInitialState: function() {
     return {people: null};
@@ -28,6 +28,7 @@ const Yearbook = React.createClass({
     });
     return (
       <div>
+        <Link to={"/about"}>About</Link>
         <h1>Yearbook</h1>
         <div className="row">{people}</div>
       </div>
