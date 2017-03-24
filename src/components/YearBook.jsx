@@ -9,6 +9,7 @@ const Yearbook = React.createClass({
     fetch('/api/people')
       .then(response => {
         response.json().then(data => {
+          console.log(data)
           this.setState({people: data});
         });
       }).catch(error => {
@@ -16,6 +17,7 @@ const Yearbook = React.createClass({
       });
   },
   render: function() {
+  
     if (!this.state.people) return (
       <div>
         <h1>Yearbook</h1>
@@ -32,7 +34,13 @@ const Yearbook = React.createClass({
         <div className="row">{people}</div>
       </div>
     );
-  }
+  },
+  results() {
+        return this.state.people.map(res=> 
+        <Person picture={res.picture}
+                    />
+        )
+    }
 });
 
 module.exports = Yearbook;

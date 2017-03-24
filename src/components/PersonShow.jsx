@@ -5,10 +5,12 @@ const PersonShow = React.createClass({
     return {person: null};
   },
   componentDidMount() {
-    fetch(`/api/people/0`)
+    fetch('/api/people/' + this.props.params.idx)
       .then(response => {
         response.json().then(data => {
-          this.setState({person: data.user});
+          console.log(data)
+          this.setState({person: data});
+          console.log(this.state.person)
         });
       }).catch(error => {
         this.setState({person: null});
