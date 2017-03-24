@@ -5,10 +5,13 @@ const PersonShow = React.createClass({
     return {person: null};
   },
   componentDidMount() {
-    fetch(`/api/people/0`)
+    console.log(this.params)
+    fetch(`/api/people/` + this.props.params.idx)
       .then(response => {
         response.json().then(data => {
-          this.setState({person: data.user});
+
+          console.log('from personShow.jsx', data)
+          this.setState({person: data});
         });
       }).catch(error => {
         this.setState({person: null});
@@ -31,14 +34,16 @@ const PersonShow = React.createClass({
 
     return (
       <div>
+
         <div className="well">
           <img src={this.state.person.picture.medium} />
-          <h2>{this.personName()}</h2>
+          <h2>{this.personName()}</h2> 
           <ul>
             <li><strong>Email:</strong> {this.state.person.email}</li>
             <li><strong>Phone:</strong> {this.state.person.phone}</li>
           </ul>
         </div>
+
       </div>
     );
   }
