@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "express": "^4.13.4",
+    "react-router": "^2.0.1",
     "request": "^2.69.0"
   }
 }
