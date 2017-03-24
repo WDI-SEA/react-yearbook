@@ -1,11 +1,13 @@
 const React = require('react');
+const Person = require('./Person');
+const YearBook = require('./YearBook')
 
 const PersonShow = React.createClass({
   getInitialState: function() {
     return {person: null};
   },
   componentDidMount() {
-    fetch(`/api/people/0`)
+    fetch('/api/people/'+this.state.idx)
       .then(response => {
         response.json().then(data => {
           this.setState({person: data.user});
@@ -28,7 +30,6 @@ const PersonShow = React.createClass({
         <h2>Loading...</h2>
       </div>
     );
-
     return (
       <div>
         <div className="well">

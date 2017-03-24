@@ -6,10 +6,10 @@ const Yearbook = React.createClass({
     return {people: null};
   },
   componentDidMount() {
-    fetch('/api/people')
+    fetch('https://randomuser.me/api/?seed=456&results=50')
       .then(response => {
         response.json().then(data => {
-          this.setState({people: data});
+          this.setState({people: data.results});
         });
       }).catch(error => {
         this.setState({people: null});
