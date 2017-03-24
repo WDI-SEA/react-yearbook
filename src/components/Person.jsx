@@ -16,7 +16,7 @@ const Person = React.createClass({
     return (
       <div className="col-md-3">
         <img src={picture.medium} />
-        <Link to={"/people/456/" + this.props.idx}><h3>{this.personName()}</h3></Link>
+        <Link to={"/people/wdi/" + this.props.idx}><h3>{this.personName()}</h3></Link>
       </div>
     );
   }

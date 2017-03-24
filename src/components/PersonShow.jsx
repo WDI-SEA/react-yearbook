@@ -7,7 +7,7 @@ const PersonShow = React.createClass({
     return {person: null};
   },
   componentDidMount() {
-    fetch('/api/people/'+this.state.idx)
+    fetch('/api/people/'+ this.props.params.idx)
       .then(response => {
         response.json().then(data => {
           this.setState({person: data.user});

@@ -14,7 +14,7 @@ const App = React.createClass({
       <div>
         <Router history={browserHistory}>
           <Route path="/" component={YearBook}></Route>
-          <Route path="/people/:seed/:id" component={PersonShow} />
+          <Route path="people/:seed/:id" component={PersonShow}/>
         </Router>
       </div>
     );
