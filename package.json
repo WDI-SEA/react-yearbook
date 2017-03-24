@@ -1,7 +1,7 @@
 {
   "name": "react-yearbook",
   "version": "1.0.0",
-  "description": "",
+  "description": "As WDI comes to a close, what better way to celebrate than with a yearbook... of random people? Let's try incorporating the React Router with a random user API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,6 +25,7 @@
     "gulp-sass": "^2.2.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-router": "^2.0.1",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {

@@ -1,11 +1,12 @@
 const React = require('react');
+const NavBar = require('./NavBar');
 
 const PersonShow = React.createClass({
   getInitialState: function() {
     return {person: null};
   },
   componentDidMount() {
-    fetch(`/api/people/0`)
+    fetch(`/api/people/${this.props.params.id}`)
       .then(response => {
         response.json().then(data => {
           this.setState({person: data.user});
@@ -31,7 +32,9 @@ const PersonShow = React.createClass({
 
     return (
       <div>
+               <NavBar />
         <div className="well">
+
           <img src={this.state.person.picture.medium} />
           <h2>{this.personName()}</h2>
           <ul>
