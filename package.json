@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WDI-SEA/react-yearbook.git"
+    "url": "git+https://github.com/Hailz/react-yearbook.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WDI-SEA/react-yearbook/issues"
+    "url": "https://github.com/Hailz/react-yearbook/issues"
   },
-  "homepage": "https://github.com/WDI-SEA/react-yearbook#readme",
+  "homepage": "https://github.com/Hailz/react-yearbook#readme",
   "devDependencies": {
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.2.0",
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "express": "^4.13.4",
+    "react-route": "^1.0.3",
     "request": "^2.69.0"
   }
 }
