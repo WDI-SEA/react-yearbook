@@ -1,8 +1,8 @@
-#React Yearbook
+# React Yearbook
 
 As WDI comes to a close, what better way to celebrate than with a yearbook... of random people? Let's try incorporating the React Router with a random user API.
 
-##Getting Started
+## Getting Started
 
 * Fork and clone this repository
 * Run `npm install` to install all dependencies
@@ -19,14 +19,14 @@ The current application interacts with https://randomuser.me at two different AP
 
 Try taking a look at the results and see what else the API returns.
 
-##Requirements
+## Requirements
 
 * Incorporate React Router so that each person routes to a new page
   * Each person's name should link to a "show" page
   * Suggested route: `/people/:seed/:id` (you will need the seed that was used to generate the initial data, otherwise it will be completely random data)
   * Each "show" page should have a link to go back to the home page
 
-##Suggested Process
+## Suggested Process
 
 * Install `react-router`
 * Include dependencies
@@ -35,7 +35,7 @@ Try taking a look at the results and see what else the API returns.
 * Test the routes with some of the preexisting components
 * Incorporate links and route params
 
-##Bonus
+## Bonus
 
 * Add two additional pages
   * `/about`
