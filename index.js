@@ -10,6 +10,12 @@ app.get('/api/people', function(req, res) {
   });
 });
 
+app.get('/api/superlatives', function(req, res) {
+  request('https://randomuser.me/api?&results=3', function(err, response, data) {
+    res.send(JSON.parse(data).results);
+  });
+});
+
 app.get('/api/people/:idx', function(req, res) {
   var idx = parseInt(req.params.idx);
   request('https://randomuser.me/api?seed=wdi&results=50', function(err, response, data) {
