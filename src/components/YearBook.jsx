@@ -9,6 +9,7 @@ const Yearbook = React.createClass({
     fetch('/api/people')
       .then(response => {
         response.json().then(data => {
+          console.log('from yearbook.jsx', data)
           this.setState({people: data});
         });
       }).catch(error => {
