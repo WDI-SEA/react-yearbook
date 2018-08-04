@@ -1,5 +1,6 @@
 const React = require('react');
 const Person = require('./Person');
+const Link = require('react-router').Link
 
 const Yearbook = React.createClass({
   getInitialState: function() {

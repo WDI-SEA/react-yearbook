@@ -8,6 +8,7 @@ const PersonShow = React.createClass({
     fetch(`/api/people/0`)
       .then(response => {
         response.json().then(data => {
+          console.log(data);
           this.setState({person: data.user});
         });
       }).catch(error => {
